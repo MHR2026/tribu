@@ -18,3 +18,11 @@ La carpeta `web/` és la web tal com es publica al hosting: HTML estàtic (plant
 `.github/workflows/deploy.yml` puja `web/` al servidor per SFTP a cada canvi de `main`.
 Necessita els secrets `SFTP_HOST`, `SFTP_USER`, `SFTP_PASSWORD` i `SFTP_PATH`
 (Settings → Secrets and variables → Actions). Sense ells no publica res.
+
+## Edició 2027
+
+- Portada: dissabte 29 de maig de 2027, cinquena edició, compte enrere fins a les 11:00 d'aquell dia.
+- L'edició 2026 està arxivada a `web/festival2026/` (amb els seus propis `assets`).
+- **Entrades:** quan l'esdeveniment estigui creat a Entradium, posa el seu identificador a
+  `web/assets/js/entrades.js` (`ENTRADIUM_EVENT`). Els botons passen de «Entrades properament»
+  a l'enllaç de compra i apareix el widget d'Entradium a la secció d'entrades.
