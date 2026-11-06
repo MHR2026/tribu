@@ -1,0 +1,121 @@
+/* TribuFest 2027 — diseny nou: turquesa amb ones, estrella groga i lletra de retolador. */
+@font-face {
+  font-family: "Gloria Hallelujah";
+  src: url("../fonts/2027/gloria-hallelujah-latin-400-normal.woff2") format("woff2");
+  font-display: swap;
+}
+
+:root {
+  --teal: #4eb2a8;
+  --teal-dark: #2f8c83;
+  --teal-deep: #1d5f59;
+  --wave: #a7d9d6;
+  --card: rgba(237, 247, 246, 0.86);
+  --star: #feff99;
+  --ink: #141414;
+  --hand: "Gloria Hallelujah", "Comic Sans MS", cursive;
+  --sans: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  font-family: var(--sans);
+  color: var(--ink);
+  background-color: var(--teal);
+  /* ones del disseny */
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='225' height='170'%3E%3Cpath d='M0 45C28 15 84 15 112 45S197 75 225 45' fill='none' stroke='%23a7d9d6' stroke-width='18' stroke-linecap='round'/%3E%3C/svg%3E");
+  background-size: 225px 170px;
+  line-height: 1.6;
+}
+img { max-width: 100%; display: block; }
+a { color: inherit; }
+.wrap { width: 100%; max-width: 1140px; margin: 0 auto; padding: 0 16px; }
+.hand { font-family: var(--hand); font-weight: 400; line-height: 1.15; }
+
+/* Capçalera */
+.top { position: sticky; top: 0; z-index: 50; background: rgba(47, 140, 131, 0.94); backdrop-filter: blur(6px); }
+.top .wrap { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding-top: 10px; padding-bottom: 10px; }
+.top .logo img { height: 44px; width: auto; }
+.menu { display: flex; align-items: center; gap: 6px; }
+.menu a { text-decoration: none; color: #fff; font-weight: 600; font-size: 0.9rem; padding: 6px 10px; border-radius: 999px; white-space: nowrap; }
+.menu a:hover, .menu a.active { background: rgba(255, 255, 255, 0.18); }
+.menu-mobile { display: none; position: relative; }
+.menu-mobile summary { list-style: none; cursor: pointer; color: #fff; font-weight: 700; padding: 8px 12px; border-radius: 999px; background: rgba(255, 255, 255, 0.18); }
+.menu-mobile summary::-webkit-details-marker { display: none; }
+.menu-mobile nav { position: absolute; right: 0; top: calc(100% + 8px); background: var(--teal-deep); border-radius: 16px; padding: 8px; display: grid; min-width: 210px; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25); }
+.menu-mobile nav a { color: #fff; text-decoration: none; font-weight: 600; padding: 10px 12px; border-radius: 10px; }
+.menu-mobile nav a:hover { background: rgba(255, 255, 255, 0.12); }
+
+/* Botons */
+.btn { white-space: nowrap; display: inline-flex; align-items: center; gap: 10px; text-decoration: none; font-family: var(--hand); font-size: 1.15rem; padding: 10px 26px 12px; border-radius: 999px; background: var(--star); color: var(--ink); border: 3px solid var(--ink); box-shadow: 4px 4px 0 var(--ink); transition: transform 0.15s, box-shadow 0.15s; }
+.btn:hover { transform: translate(2px, 2px); box-shadow: 2px 2px 0 var(--ink); }
+.btn svg { width: 26px; height: 26px; stroke: currentColor; }
+.btn-small { font-size: 1rem; padding: 6px 16px 8px; border-width: 2px; box-shadow: 3px 3px 0 var(--ink); }
+.btn-light { background: #fff; }
+
+/* Portada */
+.hero { padding: 48px 0 72px; }
+.hero h1 { font-size: clamp(2.6rem, 7vw, 5rem); margin: 0 0 8px; transform: rotate(-3deg); transform-origin: left; }
+.hero-grid { display: grid; grid-template-columns: 1.25fr 1fr; gap: 40px; align-items: center; margin-top: 28px; }
+.photo { position: relative; }
+.photo img { width: 100%; height: auto; aspect-ratio: 832 / 633; object-fit: cover; border-radius: 0 90px 90px 0; box-shadow: 0 16px 40px rgba(0, 0, 0, 0.18); }
+.star { position: absolute; width: 150px; height: 150px; fill: var(--star); }
+.photo .star { right: -46px; top: -78px; transform: rotate(14deg); }
+.hero-info { background: var(--card); border-radius: 28px; padding: 30px; }
+.hero-info .date { font-family: var(--hand); font-size: 1.9rem; margin: 0; }
+.hero-info p { margin: 8px 0; }
+.hero-info .edition { font-weight: 800; letter-spacing: 0.08em; text-transform: uppercase; font-size: 0.85rem; }
+.hero-info .btn { margin-top: 16px; }
+
+/* Compte enrere */
+.countdown { margin-top: 56px; background: var(--card); border-radius: 28px; padding: 22px; display: flex; align-items: center; justify-content: center; gap: 22px; flex-wrap: wrap; }
+.countdown .box { text-align: center; min-width: 96px; }
+.countdown .num { font-family: var(--hand); font-size: 3rem; line-height: 1; display: block; }
+.countdown .lbl { font-weight: 700; font-size: 0.75rem; letter-spacing: 0.12em; text-transform: uppercase; }
+.countdown .ticket { width: 92px; height: 92px; color: #fff; stroke: currentColor; }
+
+/* Seccions amb targeta clara */
+.section { padding: 56px 0; }
+.card { position: relative; background: var(--card); border-radius: 0 60px 60px 0; padding: 48px 44px; max-width: 900px; }
+.card.center { margin: 0 auto; border-radius: 40px; text-align: center; }
+.card h2 { font-family: var(--hand); font-weight: 400; font-size: clamp(2.1rem, 5vw, 3.4rem); line-height: 1.1; margin: 0 0 18px; }
+.card p { margin: 0 0 14px; font-size: 1.05rem; }
+.card .star { width: 110px; height: 110px; top: -60px; right: 60px; transform: rotate(-10deg); }
+.card .note { font-size: 0.95rem; opacity: 0.85; }
+.features { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin: 22px 0 6px; padding: 0; list-style: none; }
+.features li { background: #fff; border-radius: 18px; padding: 14px 16px; font-weight: 600; }
+
+/* Peu */
+.foot { background: var(--teal-deep); color: rgba(255, 255, 255, 0.85); padding: 48px 0 24px; margin-top: 40px; }
+.foot .cols { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; align-items: start; }
+.foot h3 { font-family: var(--hand); font-weight: 400; color: #fff; font-size: 1.5rem; margin: 0 0 10px; }
+.foot .social { display: flex; gap: 10px; margin: 14px 0 0; padding: 0; list-style: none; }
+.foot .social a { display: flex; width: 42px; height: 42px; border-radius: 50%; align-items: center; justify-content: center; background: rgba(255, 255, 255, 0.14); text-decoration: none; }
+.foot .social svg { width: 20px; height: 20px; fill: #fff; }
+.foot iframe { width: 100%; max-width: 100%; height: 240px; border: 0; border-radius: 18px; }
+.foot .copy { text-align: center; font-size: 0.85rem; margin-top: 32px; opacity: 0.75; }
+.foot .copy a { color: #fff; }
+
+@media (max-width: 991px) {
+  .menu { display: none; }
+  .menu-mobile { display: block; }
+  .top .ticket-btn { display: none; }
+}
+@media (max-width: 860px) {
+  .hero-grid { grid-template-columns: 1fr; }
+  .photo { margin-right: 30px; }
+  .photo .star { width: 110px; height: 110px; right: -28px; top: -54px; }
+  .features { grid-template-columns: 1fr; }
+  .card { padding: 40px 24px; border-radius: 0 40px 40px 0; }
+  .foot .cols { grid-template-columns: 1fr; }
+  .countdown { gap: 8px; padding: 18px 10px; flex-wrap: nowrap; }
+  .countdown .ticket { display: none; }
+  .countdown .box { min-width: 0; flex: 1; }
+  .countdown .num { font-size: 2rem; }
+  .countdown .lbl { font-size: 0.65rem; letter-spacing: 0.06em; }
+  .hero-info { padding: 24px; }
+  .hero-info .date { font-size: 1.6rem; }
+  .btn { font-size: 1.05rem; padding: 9px 20px 11px; }
+}

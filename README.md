@@ -6,7 +6,7 @@ La carpeta `web/` és la web tal com es publica al hosting: HTML estàtic (plant
 
 | Què | On |
 | --- | --- |
-| Portada (edició actual) | `web/index.html` |
+| Portada (edició actual, disseny 2027) | `web/index.html` i `web/assets/css/tribu-2027.css` |
 | Contacte | `web/contacto.html` |
 | Edicions anteriors | `web/festival2023/`, `web/festival2024/`, `web/festival2025/` |
 | Estils, scripts i imatges | `web/assets/` |
