@@ -75,6 +75,7 @@
           <div class="hero-info">
             <p class="edition">2027 · Cinquena edició</p>
             <p class="date">Dissabte 29 de maig</p>
+            <p>🕛 A partir de les 12 h</p>
             <p>📍 Parc Municipal de Sa Torre · Felanitx</p>
             <p><strong>Festival de música per a famílies.</strong> Concerts, circ, tallers creatius, food trucks i molt més!</p>
             <a href="#pricing" class="btn js-entrades" data-venda="Entrades aquí"><svg aria-hidden="true"><use href="#ticket" /></svg><span class="js-entrades-text">Entrades properament</span></a>
@@ -169,10 +170,10 @@
     </div>
   </footer>
 
-  <script src="assets/js/entrades.js"></script>
+  <script src="assets/js/entrades.js?v=3"></script>
   <script>
     // Compte enrere fins a l'obertura del festival
-    const finaleDate = new Date("MAY 29, 2027 11:00:00").getTime();
+    const finaleDate = new Date("MAY 29, 2027 12:00:00").getTime();
     const pad = (n, w) => String(n).padStart(w, '0');
     const timer = () => {
       const diff = Math.max(0, finaleDate - Date.now());

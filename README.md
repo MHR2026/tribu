@@ -24,5 +24,5 @@ Necessita els secrets `SFTP_HOST`, `SFTP_USER`, `SFTP_PASSWORD` i `SFTP_PATH`
 - Portada: dissabte 29 de maig de 2027, cinquena edició, compte enrere fins a les 11:00 d'aquell dia.
 - L'edició 2026 està arxivada a `web/festival2026/` (amb els seus propis `assets`).
 - **Entrades:** quan l'esdeveniment estigui creat a Entradium, posa el seu identificador a
-  `web/assets/js/entrades.js` (`ENTRADIUM_EVENT`). Els botons passen de «Entrades properament»
+  `web/assets/js/entrades.js` (`ENTRADIUM_EVENT`, ara l'esdeveniment de 2027). Els botons passen de «Entrades properament»
   a l'enllaç de compra i apareix el widget d'Entradium a la secció d'entrades.
