@@ -69,6 +69,10 @@ a { color: inherit; }
 .hero-info .edition { font-weight: 800; letter-spacing: 0.08em; text-transform: uppercase; font-size: 0.85rem; }
 .hero-info .btn { margin-top: 16px; }
 
+/* Adhesiu «Darrera edició!» */
+.hero-title { display: flex; align-items: center; gap: 28px; flex-wrap: wrap; }
+.sticker { display: inline-block; background: var(--star); color: var(--ink); border: 3px solid var(--ink); border-radius: 18px; padding: 10px 18px 14px; font-size: clamp(1.3rem, 3vw, 1.9rem); text-align: center; transform: rotate(6deg); box-shadow: 5px 5px 0 var(--ink); }
+
 /* Compte enrere */
 .countdown { margin-top: 56px; background: var(--card); border-radius: 28px; padding: 22px; display: flex; align-items: center; justify-content: center; gap: 22px; flex-wrap: wrap; }
 .countdown .box { text-align: center; min-width: 96px; }
